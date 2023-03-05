@@ -39,7 +39,7 @@ for file_path in Path('./notes').glob('**/*.md'):
     c += 1
 
 # mtime_group = list([[k, v] for k, v in mtime_group.items()])
-ctime_group = list([[k, v] for k, v in ctime_group.items()])
+ctime_group = [[k, v] for k, v in ctime_group.items()]
 ctime_group = sorted(ctime_group, key=lambda x: x[0])
 # import ipdb; ipdb.set_trace()
 data = pd.DataFrame(ctime_group)
